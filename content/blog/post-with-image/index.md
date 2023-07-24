@@ -13,8 +13,8 @@ contributors: []
 pinned: false
 homepage: false
 author:
-  name: Henk Verlinde
-  url: https://henkverlinde.com
+  name: Tom Atkins
+  url: https://www.postowl.com
 ---
 
 Welcome to the PostOwl blog.
