@@ -1,4 +1,4 @@
-title = "Doks"
+title = "PostOwl"
 baseurl = "/"
 canonifyURLs = false
 disableAliases = true
@@ -17,10 +17,10 @@ defaultContentLanguage = "en"
 disableLanguages = ["de", "nl"]
 defaultContentLanguageInSubdir = false
 
-copyRight = "Copyright (c) 2023 Hyas"
+copyRight = "Copyright (c) 2023 PostOwl"
 
 [social]
-  twitter = "getdoks"
+  twitter = "postowl"
 
 [outputs]
   home = ["HTML", "RSS", "searchIndex"]

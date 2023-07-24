@@ -1,9 +1,9 @@
 {
   "name": "postowl-website",
-  "version": "0.0.0",
-  "description": "Doks theme",
-  "author": "Hyas",
-  "license": "MIT",
+  "version": "0.1.0",
+  "description": "PostOwl website",
+  "author": "Tom Atkins",
+  "license": "AGPLv3",
   "scripts": {
     "dev": "exec-bin node_modules/.bin/hugo/hugo server --bind=0.0.0.0 --disableFastRender --baseURL=http://localhost --noHTTPCache",
     "dev:drafts": "exec-bin node_modules/.bin/hugo/hugo server --bind=0.0.0.0 --disableFastRender --baseURL=http://localhost --noHTTPCache --buildDrafts",

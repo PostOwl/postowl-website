@@ -16,3 +16,7 @@ author:
   name: Henk Verlinde
   url: https://henkverlinde.com
 ---
+
+Welcome to the PostOwl blog.
+
+Here will be lots of interesting posts!
