@@ -1,0 +1,89 @@
+{{ define "main" }}
+<section class="section container-fluid mt-n3 pb-3">
+  <div class="row justify-content-center">
+    <div class="col-lg-12 text-center">
+      <h1>{{ .Title }}</h1>
+    </div>
+    <div class="col-lg-9 col-xl-8 text-center">
+      <p class="lead">{{ .Params.lead | safeHTML }}</p>
+      <p><img src="/images/postowl-logo.svg" style="max-width:300px" alt="PostOwl logo"></p>
+
+      {{ .Content }}
+
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{ define "sidebar-prefooter" }}
+  {{ if site.Data.doks.backgroundDots -}}
+  <div class="d-flex justify-content-start">
+    <div class="bg-dots"></div>
+  </div>
+  {{ end -}}
+  {{ if eq $.Site.Language.LanguageName "English" }}
+  <section class="section section-md section-features">
+    <div class="container">
+      <div class="ratio ratio-16x9">
+        <iframe src="https://www.youtube-nocookie.com/embed/0KtiJdZsAnI" title="PostOwl in one minute" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>  
+  <section class="section section-md section-features">
+    <div class="container">
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-5">
+          <h2 class="h4">Open Source</h2>
+          <p>Self-host for free and own your own data. (Hosted option coming soon!)</p>
+        </div>
+        <div class="col-lg-5">
+          <h2 class="h4">Fast and efficient ⚡️</h2>
+          <p>We use SvelteKit and SQLite for near instant page loads. You can host with 'scale to zero' to save electricity when your site is quiet.</p>
+        </div>
+        <div class="col-lg-5">
+          <h2 class="h4">Inline editing</h2>
+          <p>No clunky admin interface! Sign in and edit your content on the page. The simplest web editing you've ever used.</p>
+        </div>
+      </div>
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-5">
+          <h2 class="h4">Three types of posts</h2>
+          <p>Create public posts like a normal blog, shared letters that only friends can see with a secret link and a private journal just for you. All in one app!</p>
+        </div>
+        <div class="col-lg-5">
+          <h2 class="h4">For the long term</h2>
+          <p>All your content is in a single SQLite database. This is easy to backup and will be readable long into the future. Read more about why PostOwl can be inter-generational...</p>
+        </div>
+        <div class="col-lg-5">
+          <h2 class="h4">And more...</h2>
+          <p>RSS feeds, search, XXX.</p>
+        </div>
+      </div>
+  </section>
+
+  <section class="section section-md section-features">
+  <div class="row justify-content-center">
+    <div class="col-lg-12 text-center">
+      <a class="btn btn-primary btn-cta rounded-pill btn-lg mb-2" href="/docs/{{ if site.Data.doks.docsVersioning }}{{ site.Data.doks.docsVersion }}/{{ end }}start-here/getting-started/" role="button">{{ i18n "get-started" }}</a>
+      <p class="meta">Open-source <a href="https://www.gnu.org/licenses/agpl-3.0.en.html">AGPLv3</a> Licensed. <a href="https://github.com/PostOwl/postowl/releases">GitHub v{{ $data := getJSON "/package.json" }}{{ $data.version }}</a></p>
+    </div>
+</section>
+
+<!-- {{ partial "main/featured-users.html" . -}} -->
+
+  {{ end }}
+{{ end }}
+
+{{ define "sidebar-footer" }}
+{{ if site.Data.doks.sectionFooter -}}
+<section class="section section-md container-fluid bg-light">
+  <div class="row justify-content-center text-center">
+    <div class="col-lg-7">
+      <h2 class="mt-2">Start building with Doks today</h2>
+      <a class="btn btn-primary rounded-pill px-4 my-2" href="/docs/{{ if site.Data.doks.docsVersioning }}{{ site.Data.doks.docsVersion }}/{{ end }}prologue/introduction/" role="button">{{ i18n "get-started" }}</a>
+    </div>
+  </div>
+</section>
+{{ end -}}
+{{ end }}
+
