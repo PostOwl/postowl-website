@@ -40,6 +40,7 @@ module.exports = {
         'dd',
         'showing',
         'hiding',
+        'ratio-16x9',
         ...whitelister([
           './node_modules/@hyas/core/assets/scss/app.scss',
           './node_modules/@hyas/doks-core/assets/scss/common/_global.scss',
