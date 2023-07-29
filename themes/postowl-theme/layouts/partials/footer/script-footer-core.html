@@ -7,7 +7,7 @@
 */}}
 
 {{ if eq (hugo.Environment) "production" -}}
-  {{ partial "footer/esbuild" (dict "src" "https://postowl-umami.fly.dev/postowlum.js" "data-website-id" "83ef1331-e4d6-484b-88fc-6211363f3e35" "load" "async" "transpile" false) -}}
+  <script async src="https://postowl-umami.fly.dev/postowlum.js" data-website-id="83ef1331-e4d6-484b-88fc-6211363f3e35"></script>
 {{ end -}}
 
 
@@ -16,5 +16,3 @@
   {{ partial "footer/esbuild" (dict "src" "js/gallery.js" "load" "async" "transpile" false) -}}
 {{ end -}}
 */}}
-
-<script async src="https://postowl-umami.fly.dev/script.js" data-website-id="83ef1331-e4d6-484b-88fc-6211363f3e35"></script>
