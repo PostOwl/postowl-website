@@ -8,6 +8,10 @@ images: []
 type: "about"
 ---
 
-# PostOwl is cool
+## What is PostOwl?
 
-Will we use this for the theme?
+PostOwl is an open-source web application that let's you create your own website for blogging, sharing letters and keeping a private journal. All your writing in one place!
+
+## Contribute
+
+New contributors welcome! Check out the [code on GitHub](https://github.com/PostOwl/postowl).
