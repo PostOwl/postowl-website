@@ -1,0 +1,20 @@
+{{ partial "footer/esbuild" (dict "src" "js/app.js" "targetPath" "main.js" "load" "async" "transpile" false) -}}
+
+{{/* EXAMPLE - only load script for production
+{{ if eq (hugo.Environment) "production" -}}
+  {{ partial "footer/esbuild" (dict "src" "js/instantpage.js" "load" "async" "transpile" false) -}}
+{{ end -}}
+*/}}
+
+{{ if eq (hugo.Environment) "production" -}}
+  {{ partial "footer/esbuild" (dict "src" "https://postowl-umami.fly.dev/postowlum.js" "data-website-id" "83ef1331-e4d6-484b-88fc-6211363f3e35" "load" "async" "transpile" false) -}}
+{{ end -}}
+
+
+{{/* EXAMPLE - only load script for a page type e.g. contact or gallery
+{{ if eq .Type "gallery" -}}
+  {{ partial "footer/esbuild" (dict "src" "js/gallery.js" "load" "async" "transpile" false) -}}
+{{ end -}}
+*/}}
+
+<script async src="https://postowl-umami.fly.dev/script.js" data-website-id="83ef1331-e4d6-484b-88fc-6211363f3e35"></script>
