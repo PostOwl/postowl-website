@@ -10,6 +10,15 @@ type: ""
 
 Keep up-to-date with PostOwl news and **hear when we launch the hosted version**.
 
-<script async data-uid="c3d214ae19" src="https://postowl.ck.page/c3d214ae19/index.js"></script>
+<form
+  action="https://buttondown.email/api/emails/embed-subscribe/postowl"
+  method="post"
+  target="popupwindow"
+  onsubmit="window.open('https://buttondown.email/postowl', 'popupwindow')"
+  class="embeddable-buttondown-form">
+  <label for="bd-email">Enter your email</label>
+  <input type="email" name="email" id="bd-email" />
+  <input class="btn btn-primary btn-cta rounded-pill mb-2" type="submit" value="Subscribe" />
+</form>
 
-(We'll only email you about PostOwl occasionally. You can unsubscribe at any time.)
+<p class="meta">(We'll only email you about PostOwl occasionally. You can unsubscribe at any time.)</p>
