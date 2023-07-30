@@ -14,6 +14,10 @@ weight: 110
 toc: true
 ---
 
+<div class="alert alert-warning" role="alert">
+  ⚠️ PostOwl currently needs some technical knowledge to deploy. We'll be launching a hosted version soon. <a href="/newsletter">Sign up for the newsletter</a> to hear when it's ready.
+</div>
+
 PostOwl is a [SvelteKit](https://kit.svelte.dev/) application inspired by [editable.website](https://editable.website) using [SQLite](https://www.sqlite.org/) for the database. It's currently optimised for SvelteKit's [adapter-node](https://github.com/sveltejs/kit/tree/master/packages/adapter-node) to enable [deployment to Fly.io](#deployment-to-flyio).
 
 ## More deployment options coming soon!
