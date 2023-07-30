@@ -1,5 +1,5 @@
 ---
-title: "Keyborard Shortcuts"
+title: "Keyborard shortcuts"
 description: "PostOwl Keyborard Shortcuts."
 summary: "PostOwl Keyborard Shortcuts."
 date: 2023-05-12T16:35:44+02:00
