@@ -20,6 +20,14 @@ PostOwl is a [SvelteKit](https://kit.svelte.dev/) application inspired by [edita
 
 We'll be adding instructions for deploying to other hosts soon. If you have success deploying to other platforms, please [let us know](https://github.com/PostOwl/postowl/discussions/categories/show-and-tell) or submit a PR documenting how you did it.
 
+## Sending email in production
+
+PostOwl uses [nodemailer](https://nodemailer.com/about/) to send email notifications when you send letters to friends.
+
+The application will run without a real SMTP server configured so **you can enter dummy data for the SMTP settings when deploying if you don't need to send emails**.
+
+If you'd like to send emails but don't have an SMTP server to use, we recommend [mailgun](https://www.mailgun.com/). Their free tier will cover usage for a personal PostOwl site. You'll need to own a domain name to get set up with mailgun. Follow their documentation to activate your domain for email sending. Then generate an SMTP password from their admin interface (click 'Reset password' under Sending > Domain Settings > SMTP credentials to get a password for a new domain).
+
 ## Deployment to fly.io
 
 **PostOwl runs for free on [fly.io](https://fly.io/)** which is one of the reasons we're recommending their platform for the first release. If you follow the steps here you should have a live site in about 15 minutes.
