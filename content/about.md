@@ -34,6 +34,6 @@ With PostOwl you own your own data. The application is open-source. Noone can ta
 
 [Michael](https://michaelaufreiter.com/) wrote most of the initial code for PostOwl. Tom contact Michael after following his work on 'web editors' for about ten years - nearly as long as I'd been thinking about PostOwl. Michael is a JavaScript wizard. You should hire him!
 
-## Contribute
+## Contributing
 
 New contributors welcome! Check out the [code on GitHub](https://github.com/PostOwl/postowl).
