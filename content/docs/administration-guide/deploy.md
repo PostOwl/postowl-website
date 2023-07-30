@@ -1,5 +1,5 @@
 ---
-title: "Deployment"
+title: "Deploy"
 description: ""
 summary: ""
 date: 2023-05-15T12:16:32+02:00
@@ -9,17 +9,22 @@ images: []
 menu:
   docs:
     parent: ""
-    identifier: "deplpoyment-6773eb7de506682cac098bb1a83e1cdf"
+    identifier: "deplpoy-6773eb7de506682cac098bb1a83e1cdf"
 weight: 110
 toc: true
 ---
 
 PostOwl is a [SvelteKit](https://kit.svelte.dev/) application inspired by [editable.website](https://editable.website) using [SQLite](https://www.sqlite.org/) for the database. It's currently optimised for SvelteKit's [adapter-node](https://github.com/sveltejs/kit/tree/master/packages/adapter-node) to enable [deployment to Fly.io](#deployment-to-flyio).
 
+## More deployment options coming soon!
 
-### Deployment to fly.io
+We'll be adding instructions for deploying to other hosts soon. If you have success deploying to other platforms, please [let us know](https://github.com/PostOwl/postowl/discussions/categories/show-and-tell) or submit a PR documenting how you did it.
 
-The [PostOwl repository](https://github.com/PostOwl/postowl) contains the files you need to deploy your PostOwl site to [fly.io](https://fly.io/).
+## Deployment to fly.io
+
+**PostOwl runs for free on [fly.io](https://fly.io/)** which is one of the reasons we're recommending their platform for the first release. If you follow the steps here you should have a live site in about 15 minutes.
+
+The [PostOwl repository](https://github.com/PostOwl/postowl) contains the files you need to deploy your PostOwl site to fly.io.
 
 1. Create an account with [fly.io](https://fly.io/).
    1. Add your credit card to Fly. PostOwl runs well on Fly's free tier but they [require an active, valid credit / bank card](https://fly.io/docs/about/credit-cards/) to prevent abuse. Unless you have a very busy site, hosting will be free.

@@ -14,7 +14,9 @@ weight: 210
 toc: true
 ---
 
-Keyboard shortcuts only work for signed in users.
+Keyboard shortcuts make using PostOwl super fast!
+
+They only work for signed in users.
 
 ### General shortcuts
 
@@ -26,6 +28,8 @@ Keyboard shortcuts only work for signed in users.
 
 ### Editing shortcuts
 
-- `cmd / ctrl + e` - edit letter
-- `cmd / ctrl + s` - save / send letter
-- `cmd / ctrl + enter` - save / send letter
+- `cmd` or `ctrl` + `e` - edit letter
+- `cmd` or `ctrl` + `s` - save / send letter
+- `cmd` or `ctrl` + `enter` - save / send letter
+
+`cmd` is the `command` key on Macs, on Windows and Linux `ctrl` is the `control` key.
