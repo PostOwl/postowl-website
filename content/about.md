@@ -4,8 +4,7 @@ description: ""
 date: 2023-04-14T14:51:16+02:00
 lastmod: 2023-04-14T14:51:16+02:00
 draft: false
-images: []
-type: "about"
+type: "page"
 ---
 
 ## What is PostOwl?
@@ -32,7 +31,7 @@ With PostOwl you own your own data. The application is open-source. Noone can ta
 
 [Tom](https://www.keybits.net/about) came up with the idea for PostOwl sometime around 2014. It took me nearly ten years to make it a reality!
 
-[Michael](https://michaelaufreiter.com/) wrote most of the initial code for PostOwl. Tom contact Michael after following his work on 'web editors' for about ten years - nearly as long as I'd been thinking about PostOwl. Michael is a JavaScript wizard. You should hire him!
+[Michael](https://michaelaufreiter.com/) wrote most of the initial code for PostOwl. Tom contact Michael after following his work on 'web editors' for about ten years - nearly as long as I'd been thinking about PostOwl! Check out his post on [implementing a rich text editor in 2023](https://letsken.com/michael/how-to-implement-a-web-based-rich-text-editor-in-2023). Michael is a JavaScript wizard. You should hire him!
 
 ## Contributing
 
