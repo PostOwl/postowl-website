@@ -27,8 +27,8 @@ To update or upgrade PostOwl you will need to get the latest release from GitHub
 To update to a new version on fly.io:
 
 1. Pull the latest changes from GitHub to your local copy of the repo (you can pull a release or the `main` branch if you want to get the very latest changes).
-2. Run `fly deploy` **with the `--build-secret` options you used when doing the first deployment** see the [deploy](/docs/administration-guide/deploy/#deployment-to-flyio) for details.
+2. Run `fly deploy`
 
-<div class="alert alert-warning" role="alert">
-  <p>⚠️ ATTENTION: Don't run just `fly deploy` on its own! You need to include the options you used on first deploy.</p>
-</div>
+### Changing your password
+
+If you need to change your password, edit `.env.production` with a new password and run `fly deploy` again.

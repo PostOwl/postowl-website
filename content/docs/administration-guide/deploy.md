@@ -47,27 +47,13 @@ The [PostOwl repository](https://github.com/PostOwl/postowl) contains the files 
    1. Choose a name for your app (e.g. `yourapp`- app names need to be unique across all of fly.io) or hit enter to let Fly auto generate a name
    1. Choose a Fly organization to deploy to if prompted
 1. Rename `fly.toml.example` to `fly.toml` and edit the lines between 'BEGIN EDITS' and 'END EDITS' - make sure to set the app name to the name you chose in the previous step
-1. Edit the values in the 'fly deploy' command below and then run it in your terminal
-   1. Don't change the value of `DB_PATH`
-   1. Make sure to replace `yourapp` with the name you chose when creating the application above
-   1. Edit all remaining values with `your` in them
-   1. For the SMTP details, see the section above [Sending email in production](#sending-email-in-production). You don't need to use real values to try the app
-
-```
-fly deploy \
-    --build-secret DB_PATH="./data/db.sqlite3" \
-    --build-secret ORIGIN="https://yourapp.fly.dev" \
-    --build-secret ADMIN_NAME="Your Name" \
-    --build-secret ADMIN_EMAIL="you@your.domain" \
-    --build-secret ADMIN_PASSWORD="your-super-secret-admin-password" \
-    --build-secret SMTP_SERVER="your.smtp.server" \
-    --build-secret SMTP_PORT="465" \
-    --build-secret SMTP_USERNAME="postmaster@your.smtp.server" \
-    --build-secret SMTP_PASSWORD="your-super-secret-smtp-password"
-```
-<div class="alert alert-warning" role="alert">
-  ⚠️ ATTENTION: On each subsequent deploy you need to apply the previous command again, including all the --build-secret entries. We are looking for ways to improve this.  We had situations where the deploy got stuck, but re-running the command fixed it.
-</div>
+1. Rename `.env.production.example` to `.env.production`
+1. Edit `.env.production`:
+    1. Don't change the value of `DB_PATH` or `BODY_SIZE_LIMIT`
+    1. In the `ORIGIN` url replace `yourapp` with the name you chose when creating the application above
+    1. Edit all remaining values with `your` in them
+    1. For the SMTP details, see the section above [Sending email in production](#sending-email-in-production). You don't need to use real values to try the app.
+1. Run `fly deploy`
 
 Fly will let you know when the app is deployed. Visit the URL shown in your terminal and sign in with the `ADMIN_PASSWORD` you set above.
 
