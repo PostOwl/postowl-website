@@ -17,7 +17,7 @@ homepage: false
 
 Thanks for everyone who tried the first release of PostOwl.
 
-Today we're releasing some updates based on early feedback.
+Today we're releasing some updates based on early feedback. [v0.1.1 is available now from GitHub](https://github.com/PostOwl/postowl/releases/tag/v0.1.1)
 
 If you've already got a PostOwl deployment on fly.io you can update by pulling the latest changes and redeploying. Make sure to read the notes here as you'll need to edit some files and change your deployment command. (Future updates will be much simpler, so please bear with us for this release!)
 
