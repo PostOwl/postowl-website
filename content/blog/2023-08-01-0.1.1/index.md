@@ -15,7 +15,7 @@ pinned: false
 homepage: false
 ---
 
-Thanks for everyone who tried the first release of PostOwl.
+Thanks to everyone who tried the first release of PostOwl.
 
 Today we're releasing some updates based on early feedback. [v0.1.1 is available now from GitHub](https://github.com/PostOwl/postowl/releases/tag/v0.1.1)
 
