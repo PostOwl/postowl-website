@@ -65,7 +65,7 @@ Have fun creating letters! 🦉
 
 In the past, the problem with shutting down is that it would take some time for your site to start up again - remember the Heroku free plan?! Fly.io use [firecracker vms](https://fly.io/docs/reference/architecture/#compute) which start almost instantly. If your site goes to sleep, you'll hardly notice it starting up from a cold start (in our tests it takes about 200ms)! 🔥
 
-The default configuration in PostOwl has `auto_stop_machines = true` in `fly.toml.example`. We recommend you keep this setting. We have code that gracefully closes the database connectionshuts and shuts down the application server before the machine stops.
+The default configuration in PostOwl has `auto_stop_machines = true` in `fly.toml.example`. We recommend you keep this setting. We have code that gracefully closes the database connection and shuts down the application server before the machine stops.
 
 Now you can have the benefits of a dynamic web application without the costs of keeping a VPS up all the time. And you're being kind to the environment! 🌳
 
