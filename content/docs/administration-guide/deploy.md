@@ -49,7 +49,7 @@ The [PostOwl repository](https://github.com/PostOwl/postowl) contains the files 
 1. Rename `fly.toml.example` to `fly.toml` and edit the lines between 'BEGIN EDITS' and 'END EDITS' - make sure to set the app name to the name you chose in the previous step
 1. Rename `.env.production.example` to `.env.production`
 1. Edit `.env.production`:
-    1. Don't change the value of `DB_PATH` or `BODY_SIZE_LIMIT`
+    1. Don't change the value of `DB_PATH`
     1. In the `ORIGIN` url replace `yourapp` with the name you chose when creating the application above
     1. Edit all remaining values with `your` in them
     1. For the SMTP details, see the section above [Sending email in production](#sending-email-in-production). You don't need to use real values to try the app.
