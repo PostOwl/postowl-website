@@ -13,7 +13,7 @@ Keep up-to-date with PostOwl news and **hear when we launch the hosted version**
 <form method="post" action="https://newsletter.postowl.com/subscription/form" class="listmonk-form">
 <div class="mb-3">
   <label for="inputName1" class="form-label">First Name</label>
-  <input type="text" class="form-control" id="inputName1">
+  <input type="text" name="name" class="form-control" id="inputName1">
 </div>
 <div class="mb-3">
   <input type="hidden" name="nonce" />
