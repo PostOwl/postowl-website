@@ -63,7 +63,7 @@ Have fun creating letters! 🦉
 
 'Scale to zero' means that when your site is inactive, the [machine will automatically shutdown](https://fly.io/docs/apps/autostart-stop/). This saves costs and electricity. For low traffic personal sites it's ideal.
 
-In the past, the problem with shutting down is that it would take some time for your site to start up again - remember the Heroku free plan?! Fly.io use [firecracker vms](https://fly.io/docs/reference/architecture/#compute) which start almost instantly. If your site goes to sleep, you'll hardly notice it starting up from a cold start (in our tests it takes about 200ms)! 🔥
+In the past, the problem with shutting down is that it would take some time for your site to start up again - remember the Heroku free plan?! Fly.io use [firecracker vms](https://fly.io/docs/reference/architecture/#compute) which start almost instantly. If your site goes to sleep, you'll hardly notice it starting up. In our tests it takes about one second for the server to respond to an http request from a cold start! 🔥
 
 The default configuration in PostOwl has `auto_stop_machines = true` in `fly.toml.example`. We recommend you keep this setting. We have code that gracefully closes the database connection and shuts down the application server before the machine stops.
 
