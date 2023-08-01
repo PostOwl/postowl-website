@@ -1,5 +1,5 @@
 ---
-title: "PostOwl 0.1.1"
+title: "PostOwl v0.1.1"
 slug: "postowl-011"
 description: ""
 summary: ""
