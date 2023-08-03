@@ -52,6 +52,7 @@ The [PostOwl repository](https://github.com/PostOwl/postowl) contains the files 
    1. Choose a name for your app (e.g. `yourapp`- app names need to be unique across all of fly.io) or hit enter to let Fly auto-generate a name
    1. Choose a Fly organization to deploy to if prompted
    1. Select the region to deploy to (Fly will automatically select one close to you)
+1. Edit the generated `Dockerfile`, replace `RUN npm run build` with `RUN mkdir /data && npm run build`
 1. Edit the generated `fly.toml` file. After the `[build]` section paste the lines below:  
   ```
 [experimental]
