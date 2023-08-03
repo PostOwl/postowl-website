@@ -59,7 +59,7 @@ The [PostOwl repository](https://github.com/PostOwl/postowl) contains the files 
   cmd = ["/app/scripts/start-fly.sh"]
   entrypoint = ["sh"]
 ```
-10. Run `fly launch`
+10. Run `fly deploy`
 
 Fly will let you know when the app is deployed. Visit the URL shown in your terminal and sign in with the `ADMIN_PASSWORD` you set in `.env.production`.
 
