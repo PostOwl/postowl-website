@@ -56,7 +56,7 @@ seo:
   jsonld_article_types: [article, articles]
   jsonld_news_article_types: [news, updates]
   jsonld_blog_posting_types: [post, posts, blog]
-  images: ["postowl-logo.png"] 
+  images: ["images/postowl-logo-og.png"] 
   private: false
   twitterSite: "@postowl"
   twitterCreator: "@keybits"
