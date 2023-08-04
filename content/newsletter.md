@@ -5,7 +5,7 @@ date: 2023-07-29T14:51:16+02:00
 lastmod: 2023-07-29T14:51:16+02:00
 draft: false
 images: []
-type: ""
+type: "page"
 ---
 
 Keep up-to-date with PostOwl news and **hear when we launch the hosted version**.
