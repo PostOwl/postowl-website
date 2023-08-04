@@ -56,8 +56,10 @@ seo:
   jsonld_article_types: [article, articles]
   jsonld_news_article_types: [news, updates]
   jsonld_blog_posting_types: [post, posts, blog]
-  image: "/images/postowl-logo.png" 
+  images: ["postowl-logo.png"] 
   private: false
+  twitterSite: "@postowl"
+  twitterCreator: "@keybits"
 
 # Inline SVG (@hyas/inline-svg)
 inline_svg:
