@@ -18,7 +18,7 @@ Keyboard shortcuts make using PostOwl super fast!
 
 They only work for signed in users.
 
-### General shortcuts
+### Navigation shortcuts
 
 - `h` go to home page
 - `n` new letter
@@ -26,10 +26,20 @@ They only work for signed in users.
 - `esc` close menu modal
 - `f` go to friends page
 
-### Editing shortcuts
+### Letter action shortcuts
 
 - `cmd` or `ctrl` + `e` - edit letter
 - `cmd` or `ctrl` + `s` - save / send letter
 - `cmd` or `ctrl` + `enter` - save / send letter
 
 `cmd` is the `command` key on Macs, on Windows and Linux `ctrl` is the `control` key.
+
+### Editor shortcuts
+
+In addition to the controls at the top of the editor window, PostOwl supports [Markdown](https://commonmark.org/help/). For example you can use:
+
+- \*\* either side of a word to make it bold
+- To insert a code block you can use three backticks \`\`\` and then start a new line.
+- To exit a code block press `shift + enter`.
+
+See the [reference guide](https://commonmark.org/help/) for more shortcuts.
