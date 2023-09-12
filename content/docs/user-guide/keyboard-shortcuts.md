@@ -21,14 +21,14 @@ They only work for signed in users.
 ### Navigation shortcuts
 
 - `h` go to home page
+- `f` go to friends page
 - `n` new letter
+- `e` edit current letter (or profile if on home page)
 - `m` toggle menu modal
 - `esc` close menu modal
-- `f` go to friends page
 
 ### Letter action shortcuts
 
-- `cmd` or `ctrl` + `e` - edit letter
 - `cmd` or `ctrl` + `s` - save / send letter
 - `cmd` or `ctrl` + `enter` - save / send letter
 
