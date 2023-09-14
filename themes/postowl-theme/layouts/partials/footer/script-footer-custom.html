@@ -1,4 +1,4 @@
-{{ partial "footer/esbuild" (dict "src" "js/app.js" "targetPath" "main.js" "load" "async" "transpile" false) -}}
+{{/* Put your custom <script></script> tags here */}}
 
 {{/* EXAMPLE - only load script for production
 {{ if eq (hugo.Environment) "production" -}}
@@ -9,7 +9,6 @@
 {{ if eq (hugo.Environment) "production" -}}
   <script async src="https://bustle.postowl.com/postowlum.js" data-website-id="a9e4146a-5bf0-46e7-849e-1bb8b092ec3a"></script>
 {{ end -}}
-
 
 {{/* EXAMPLE - only load script for a page type e.g. contact or gallery
 {{ if eq .Type "gallery" -}}
