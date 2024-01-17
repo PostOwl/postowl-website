@@ -38,32 +38,47 @@ If you'd like to send emails but don't have an SMTP server to use, we recommend 
 
 The [PostOwl repository](https://github.com/PostOwl/postowl) contains the files you need to deploy your PostOwl site to fly.io.
 
-1. Create an account with [fly.io](https://fly.io/).
-1. Add your credit card to Fly. PostOwl runs well on Fly's free tier but they [require an active, valid credit / bank card](https://fly.io/docs/about/credit-cards/) to prevent abuse. Unless you have a very busy site, hosting will be free.
-1. [Install `flyctl`](https://fly.io/docs/hands-on/install-flyctl/) and sign in with `fly auth login`
-1. Clone the PostOwl code to a directory on your computer: `git clone https://github.com/PostOwl/postowl.git`
-1. Enter the directory you cloned the repo to: `cd postowl`
-1. Rename `.env.production.example` to `.env.production`
-1. Edit `.env.production`:
-    1. Don't change the value of `DB_PATH`
-    1. Edit all values with `your` in them (make sure to set a secure password)
-    1. For the SMTP details, see the section above [Sending email in production](#sending-email-in-production). You don't need to use real values to try the app.
-1. Run `fly launch` and respond to the prompts:
-   1. Choose a name for your app (e.g. `yourapp`- app names need to be unique across all of fly.io) or hit enter to let Fly auto-generate a name
-   1. Choose a Fly organization to deploy to if prompted
-   1. Select the region to deploy to (Fly will automatically select one close to you)
-1. Edit the generated `Dockerfile`, replace `RUN npm run build` with `RUN mkdir /data && npm run build`
-1. Edit the generated `fly.toml` file. After the `[build]` section paste the lines below:  
-  ```
-[experimental]
-  cmd = ["/app/scripts/start-fly.sh"]
-  entrypoint = ["sh"]
+- Create an account with [fly.io](https://fly.io/).
+- Add your credit card to Fly. PostOwl runs well on Fly's free tier but they [require an active, valid credit / bank card](https://fly.io/docs/about/credit-cards/) to prevent abuse. Unless you have a very busy site, hosting will be free.
+- [Install `flyctl`](https://fly.io/docs/hands-on/install-flyctl/) and sign in with `fly auth login`
+- Clone the PostOwl code to a directory on your computer: `git clone https://github.com/PostOwl/postowl.git`- Enter the directory you cloned the repo to: `cd postowl`
+- Run `fly apps create --name YOUR_APP_NAME`
+    - You can choose `YOUR_APP_NAME`. This will be used as the Fly application name and your app will be available at `https://YOUR_APP_NAME.fly.dev`
+    - The application name has to be unique across Fly - Flyctl will tell you if the name you've chosen is already in use. Or you can omit the `--name` flag and Fly will auto-generate an application name for you.
+    - If you own a domain you can set a custom domain later (see below)
+- Run the command shown in the block below:
+  - Edit all values beginning with `YOUR_` (It's easiest if you paste into a text editor to make the edits)
+  - `YOUR_APP_NAME` must be the same as you set above
+  - For the SMTP details, see the section above [Sending email in production](#sending-email-in-production). You don't need to use real values to try the app.
 ```
-10. Run `fly deploy`
+fly secrets set -a YOUR_APP_NAME \
+  ADMIN_NAME="YOUR_NAME" \
+  ADMIN_EMAIL="YOUR_EMAIL" \
+  ADMIN_PASSWORD="YOUR_PASSWORD" \
+  DB_PATH="/data/YOUR_APP_NAME.sqlite3" \
+  ORIGIN="https://YOUR_APP_NAME.fly.dev"
+  SMTP_SERVER="YOUR_SMTP_SERVER_ADDRESS" \
+  SMTP_PORT="465" \
+  SMTP_USERNAME="YOUR_SMTP_USER_NAME" \
+  SMTP_PASSWORD="YOUR_SMTP_USER_PASSWORD"
+```
+- Run `fly deploy -a YOUR_APP_NAME -r YOUR_REGION_ID --volume-initial-size 1`
+   - For `YOUR_REGION_ID`, see the <a href="https://fly.io/docs/reference/regions/" target="_blank">list of region codes on the Fly website</a>.
 
-Fly will let you know when the app is deployed. Visit the URL shown in your terminal and sign in with the `ADMIN_PASSWORD` you set in `.env.production`.
+Fly will let you know when the app is deployed. Visit the URL shown in your terminal and sign in with `YOUR_PASSWORD` as set above.
 
-Have fun creating letters! 🦉
+Have fun with your PostOwl website! 🦉
+
+### Use your own domain
+
+You can serve PostOwl from a domain or subdomain you own.
+
+- Run `fly ips list -a YOUR_APP_NAME` to get the IPv4 and IPv6 addresses.
+- Head over to your DNS provider and add A and AAAA records for `YOUR_DOMAIN` with the IPv4 and IPv6 values.
+- Run `fly certs create -a YOUR_APP_NAME YOUR_DOMAIN`
+- Run `fly certs show -a YOUR_APP_NAME YOUR_DOMAIN` to watch your certificates being issued.
+
+More details and considerations for subdomains in the [fly docs](https://fly.io/docs/app-guides/custom-domains-with-fly/). If you're using Cloudflare for DNS make sure to read these docs as the instructions are slightly different.
 
 ### 'Scale to zero' on fly.io
 
@@ -75,13 +90,4 @@ The default configuration in PostOwl has `auto_stop_machines = true` in `fly.tom
 
 Now you can have the benefits of a dynamic web application without the costs of keeping a VPS up all the time. And you're being kind to the environment! 🌳
 
-### Connect a domain to your Fly.io app
 
-You can serve PostOwl from a domain or subdomain you own.
-
-- Run `fly ips list -a myapp` to get the IPv4 and IPv6 addresses.
-- Head over to your DNS provider and add A and AAAA records for myapp.com with the IPv4 and IPv6 values.
-- Run `fly certs create -a myapp myapp.com`
-- Run `fly certs show -a myapp myapp.com` to watch your certificates being issued.
-
-More details and considerations for subdomains in the [fly docs](https://fly.io/docs/app-guides/custom-domains-with-fly/)
