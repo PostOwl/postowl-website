@@ -76,7 +76,8 @@ You can serve PostOwl from a domain or subdomain you own.
 - Run `fly ips list -a YOUR_APP_NAME` to get the IPv4 and IPv6 addresses.
 - Head over to your DNS provider and add A and AAAA records for `YOUR_DOMAIN` with the IPv4 and IPv6 values.
 - Run `fly certs create -a YOUR_APP_NAME YOUR_DOMAIN`
-- Run `fly certs show -a YOUR_APP_NAME YOUR_DOMAIN` to watch your certificates being issued.
+- Run `fly certs show -a YOUR_APP_NAME YOUR_DOMAIN` to watch your certificates being issued
+- Update the Fly secret for `ORIGIN` to be `https://YOUR_DOMAIN`
 
 More details and considerations for subdomains in the [fly docs](https://fly.io/docs/app-guides/custom-domains-with-fly/). If you're using Cloudflare for DNS make sure to read these docs as the instructions are slightly different.
 
