@@ -1,7 +1,7 @@
 ---
-title: "Keyborard shortcuts"
-description: "PostOwl Keyborard Shortcuts."
-summary: "PostOwl Keyborard Shortcuts."
+title: "Keyboard shortcuts"
+description: "PostOwl Keyboard Shortcuts."
+summary: "PostOwl Keyboard Shortcuts."
 date: 2023-05-12T16:35:44+02:00
 lastmod: 2023-05-12T16:35:44+02:00
 draft: false
