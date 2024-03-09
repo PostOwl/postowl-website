@@ -26,7 +26,7 @@ You can pull a backup locally and run it to check if it is valid. That's also qu
 
 1. Make a snapshot remotely
    - `fly ssh console`
-   - `sqlite3 /data/db.sqlite3 ".backup /data/db.sqlite3.bacup"`
+   - `sqlite3 /data/db.sqlite3 ".backup /data/db.sqlite3.backup"`
    - `sqlite3 /data/db.sqlite3.backup "PRAGMA integrity_check;"` (optional integrity check)
    - Exit the remote console (CTRL+D)
 1. Download the database
@@ -48,4 +48,3 @@ To restore a backup in production, you need to be a bit careful and follow these
    - Exit SFTP client (CTRL+D)
 1. Restart the app (so that the new DB gets picked up)
    - `fly apps restart`
-
